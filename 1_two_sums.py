@@ -31,7 +31,7 @@ Only one valid answer exists.
 """
 
 class Solution(object):
-    # Brute force solution O(n^2). Loop through twice and adding up numbers.
+    # Brute force solution with time O(n^2) and space O(1). Loop through twice and adding up numbers.
     def twoSum_brute(self, nums, target):
         """
         :type nums: List[int]
@@ -44,7 +44,7 @@ class Solution(object):
                 if two_sum == target:
                     return [x,y]
 
-    # Fast version solution O(n). Create dictionary, append each value in nums, and check if target-value exists.
+    # Fast version solution with time O(n) and space O(n). Create dictionary, append each value in nums, and check if target-value exists.
     def twoSum_fast(self, nums, target):
         num_dict = {}
         for i, val in enumerate(nums):
