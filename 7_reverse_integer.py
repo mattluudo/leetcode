@@ -31,7 +31,7 @@ Constraints:
 
 class Solution(object):
     
-    # Converts to str and reverse with time O(log(x)) and space O(log(x) where x is the integer
+    # Converts to str and reverse with time O(log(x)) and space O(log(x)) where x is the integer
     def reverse(self, x):
         """
         :type x: int
