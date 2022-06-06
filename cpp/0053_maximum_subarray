@@ -1,0 +1,30 @@
+#include <cmath>
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int max_num = -1 * std::pow(10, 4);
+        
+        int cur_sum = 0;
+        int max_sum = 0;
+        for (int ii = 0; ii < nums.size(); ii++) {
+            cur_sum += nums[ii];
+            if (cur_sum > max_sum) {
+                max_sum = cur_sum;
+            }
+            if (cur_sum < 0) {
+                cur_sum = 0;
+            }
+            if (nums[ii] >= max_num) {
+                max_num = nums[ii];
+            }
+        }
+        
+        if (max_sum <= 0) {
+            return max_num;
+        } else {
+            return max_sum;
+        }
+        
+    }
+};
